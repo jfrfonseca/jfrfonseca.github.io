@@ -60,7 +60,7 @@ if __name__ == '__main__':
 
     # Iterate every notebook
     for ipynb_file in os.listdir('notebooks'):
-        if ipynb_file.endswith('.ipynb'):
+        if not ipynb_file.startswith('_') and quandlipynb_file.endswith('.ipynb'):
 
             # Get the post name for the notebook
             post_name = re.sub(r'\W+', '', ipynb_file.replace('.ipynb', '').replace(' ', '_').lower()) + '.md'
